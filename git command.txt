@@ -30,7 +30,6 @@
     git fetch: Updates the remote tracking Branch with the code from the remote Branch
     git remote rm origin: Removes the connection between the local Repository and the remote Repository, "origin" is the remote Repository`s name
 
-
 -------- Note ---------
 
-	HEAD: show the last commit of files
+	- HEAD: show the last commit of files
