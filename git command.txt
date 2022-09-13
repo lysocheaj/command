@@ -6,17 +6,31 @@
     git commit -m "your message": Save updated code to a new Commit named "your message"
     git log: List all Commits inside your Branch
 	git log --oneline: List all commits with one line
-    git checkout branch-name: Jump to the last Commit of a Branch
+    git checkout branch-name / git branch-name: Jump to the last Commit of a Branch or change to new branch
     git checkout commitid Jump to a specific Commit of a Branch (commitid should be the ID of the Commit you want to checkout)
     git checkout -- .: Jump back to the last Commit and remove any untracked changes
-    get reset --hard: Turn the selected Commit into the new HEAD
+    git reset --hard: Turn the selected Commit into the new HEAD
     git branch: List all Branches inside your Repository
     git checkout -b branch-name: Create a new Branch named branch-name
     git merge branch-name: Merge two Branches, branch-name is the Branch you merge with the Branch you're currently working in
     git branch -D branch-name: Delete the Branch named branch-name
 	
+-------- server ------------------
+	git remote add origin url : copy url on github when we create new repository to estabish connection between local and server repository
+	git push: to current branch
+	git push origin branch-name: to specific branch
 	git pull: w to save, q to quit  when both local and server have sth new but local commited new files
-
-
 	
-	**Note** HEAD: show the last commit of files
+	git remote add origin URL: Establishes a connection between the local Git Repository you're currently working on and the remote Repository (URL should be the URL of this Repository)
+    git remote -v: Displays all remote Respositories your local Repository is connected to ("-v" also shows the URL of the remote Repository)
+    git push -u origin master: Upload code from your local Branch to a remote Branch in the remote Repository ("origin" is the name of the remote Repository, "master" the name of the remote Branch)
+    git clone: Copy or clone an entire remote Repository to your machine. Automatically creates a remote tracking Branch (see below)
+    git push and git pull: Upload code to or download code from a remote Repository. Only possible after a remote tracking Branch was created
+    "remote tracking Branch": Branch "in between" the local Branch and the remote Branch. Ensures that code is pushed or pulled between the right Repositories and Branches. Automatically created when using "git clone" or "git push"/"git pull" explicitly (i.e. with information regarding the name of the remote Repository and Branch)
+    git fetch: Updates the remote tracking Branch with the code from the remote Branch
+    git remote rm origin: Removes the connection between the local Repository and the remote Repository, "origin" is the remote Repository`s name
+
+
+-------- Note ---------
+
+	HEAD: show the last commit of files
